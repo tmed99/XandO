@@ -43,7 +43,7 @@ int main()
     
     if ( !(column == QUIT && row == QUIT) || !(column < 0 || row < 0 || column > 2 || row > 2))
     {
-    turn = row, column;
+    turn = board[row][column];
     } 
   
     if (turn = 'X')
@@ -66,9 +66,14 @@ int main()
     //1-C-1.  turn should be assigned the value 'X'
     
     cout<<"\nBOARD\n-----\n";
-    
-    
-    //TODO: Print the current board
+    for(row=0; row<3; row++){
+       for(column=0;column<3;column++){
+         cout<< board[row][column] << " "; 
+       }
+       cout<< endl;
+       }
+       
+       //TODO: Print the current board
     //Outline
     //1. Traverse through each row, calling the current row r
     //1-A. Traverse through each column in row r, calling the current column c
