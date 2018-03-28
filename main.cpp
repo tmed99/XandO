@@ -40,6 +40,22 @@ int main()
     {
       cout<<"Values must be between 0 and 2.\n";
     }
+    
+    if ( !(column == QUIT && row == QUIT) || !(column < 0 || row < 0 || column > 2 || row > 2))
+    {
+    turn = row, column;
+    } 
+  
+    if (turn = 'X')
+    {
+    turn = 'O';
+    }
+    else
+    {
+    turn = 'X';
+    } 
+
+
     //TODO: Place the piece and swap turns
     //Outline
     //1. When neither of the (above) if nor else if statements are true, then...
@@ -50,6 +66,8 @@ int main()
     //1-C-1.  turn should be assigned the value 'X'
     
     cout<<"\nBOARD\n-----\n";
+    
+    
     //TODO: Print the current board
     //Outline
     //1. Traverse through each row, calling the current row r
