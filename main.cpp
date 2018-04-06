@@ -10,6 +10,7 @@ const char BLANK = ' ';
 const char X = 'X';
 const char O = 'O';
 const int QUIT = -1;
+const int winner = x;
 
 int main()
 {
@@ -22,13 +23,14 @@ int main()
   int row;
   int column;
   bool playing = true; //Continue playing by default
-
+  
   do
   {
     cout<<turn<<"'s turn.\n";
     cout<<"Which column and row (0-2, or -1 for both to quit)?\n";
     cin>>column;
     cin>>row;
+    
 
     //Make sure the user isn't quitting
     if(column == QUIT && row == QUIT)
@@ -66,13 +68,14 @@ int main()
     //1-C-1.  turn should be assigned the value 'X'
     
     cout<<"\nBOARD\n-----\n";
-    for(row=0; row<3; row++){
-       for(column=0;column<3;column++){
-         cout<< board[row][column] << " "; 
-       }
-       cout<< endl;
-       }
-       
+    for (int r= 0; r < board.size(); r++)
+      {
+        for (int i = 0; (board[row].size(); i++)
+          {
+          cout<< board[row][column];
+          }
+      }
+
        //TODO: Print the current board
     //Outline
     //1. Traverse through each row, calling the current row r
@@ -81,8 +84,10 @@ int main()
     //1-A-2. Display a space
     //1-B. Display an newline to move to the next row of the board
     
-  }while( playing );
-
+  } while( playing );
+  
+ 
+  cout<<"Winner is "<<winner<<"\n"
   cout<<"Goodbye!\n";
 
   return 0;
