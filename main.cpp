@@ -10,9 +10,9 @@ const char BLANK = ' ';
 const char X = 'X';
 const char O = 'O';
 const int QUIT = -1;
-const int winner = x;
-
+const char winner = 'x';
 int main()
+
 {
   //3x3 matrix of characters, initially with blank spaces in each position
   char board[ROWS][COLUMNS] = {{BLANK, BLANK, BLANK},
@@ -70,7 +70,7 @@ int main()
     cout<<"\nBOARD\n-----\n";
     for (int r= 0; r < board.size(); r++)
       {
-        for (int i = 0; (board[row].size(); i++)
+        for (int i = 0; ( < board[row].size() ); i++)
           {
           cout<< board[row][column];
           }
@@ -87,7 +87,7 @@ int main()
   } while( playing );
   
  
-  cout<<"Winner is "<<winner<<"\n"
+  cout<<"Winner is "<<winner<<"\n";
   cout<<"Goodbye!\n";
 
   return 0;
